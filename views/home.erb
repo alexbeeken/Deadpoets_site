@@ -1,0 +1,28 @@
+<div id="Voting_Box">
+  <h1>Friday Hangout Spot Vote</h1>
+  <h2>Current Standings</h2>
+  <form action="/vote_submit" method="post">
+    <table class="table" width="auto">
+      <tr>
+        <th>
+          <h5>Place</h5>
+        </th>
+        <th>
+          <h5>Current Votes</h5>
+        </th>
+      </tr>
+      <% @table.each() do |entry| %>
+      <tr>
+        <td>
+          <%= "<p>#{entry['placename']}</p>" %>
+        </td>
+        <td>
+          <%= "<p>#{entry['votes']}</p>" %>
+        </td>
+    </tr>
+    <% end %>
+  </table>
+</form>
+
+<a href="/login_form">Login to Vote</a>
+</div>

@@ -1,0 +1,44 @@
+<div id="Voting_Box">
+	<h2>Vote for your favorite place!</h2>
+  <form action="/vote_submit" method="post">
+    <table class="table" width="auto">
+			<tr>
+				<th>
+					<h5>Place</h5>
+				</th>
+				<th>
+					<h5>Current Votes</h5>
+				</th>
+				<th>
+					<h5>Select</h5>
+				</th>
+			</tr>
+      <% @table.each() do |entry| %>
+			<tr>
+        <td>
+            <%= "<p>#{entry['placename']}</p>" %>
+        </td>
+				<td>
+						<%= "<p>#{entry['votes']}</p>" %>
+				</td>
+				<td>
+					<div class='radio'>
+						<%= "<input type='radio' name='ballot' value=#{entry['id']}>" %>
+      		</div>
+				</td>
+      </tr>
+    <% end %>
+    </table>
+		<input type="hidden" name="user" value=<%= "#{@user}" %>>
+    <input id="submit" type="submit" value="Vote!">
+  </form>
+</div>
+
+<div id="Add_A_Place">
+  <h2>Add a place!</h2>
+  <form action="/add_a_place" method="post">
+    <input type="text" name="add_text">
+    <input type="hidden" name="user" value=<%= "#{@user} "%> >
+    <input type="submit" name="submit" value="add">
+  </form>
+</div>
