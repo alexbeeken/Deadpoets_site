@@ -4,12 +4,14 @@ require("./lib/voting_entry")
 require('pg')
 require('pry')
 
-DB = PG::Connection.open(:dbname => 'dc4clh7i0hvanm', :host => 'ec2-54-225-101-64.compute-1.amazonaws.com', :port => '5432', :password => 'REMOVED', :user => 'ndpcmhkggeejyz')
+DB = PG::Connection.open(:dbname => 'dc4clh7i0hvanm', :host => 'ec2-54-225-101-64.compute-1.amazonaws.com', :port => '5432', :password => 'REMOVED' , :user => 'ndpcmhkggeejyz')
 
+=begin
 configure :development do
   set :bind, '0.0.0.0'
   set :port, 3000
 end
+=end
 
 get('/') do
   @table = DB.exec("SELECT * FROM voting_booth;")

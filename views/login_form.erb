@@ -1,19 +1,26 @@
 <div id="/login">
   <h2>Login to vote</h2>
   <form action="/login" method="post">
-    <input type="text" name="name">
-    <input type="password" name="password">
-    <input type="submit" name="submit" value="Go!">
+    <input type="text" name="name" placeholder="username">
+    <br>
+    <input type="password" name="password" placeholder="password">
+    <br>
+    <input type="submit" name="submit" value="Go!" class="btn btn-info">
   </form>
 </div>
+
+<br>
 
 <div id="register">
   <h2>Register to vote for Friday Hangouts!</h2>
   <p> use a new simple password for this site </p>
   <form action="/add_a_user" method="post">
-    <input type="text" name="name" placeholder="name">
+    <input type="text" name="name" placeholder="desired username">
+    <br>
     <input type="password" name="password" placeholder="password">
+    <br>
     <input type="text" name="email" placeholder="email">
-    <input type="submit" name="submit" value="Register">
+    <br>
+    <input type="submit" name="submit" value="Register" class="btn btn-info">
   </form>
 </div>
