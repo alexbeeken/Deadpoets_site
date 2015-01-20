@@ -34,6 +34,10 @@ h5 {
   background-color: black;
 }
 
+.jumbotron input {
+  color: black;
+}
+
 @font-face {
     font-family: 'bombingregular';
     src: url('bombing-webfont.eot');
