@@ -20,6 +20,19 @@ h5 {
   font-family: 'alien_encounters_solidregular';
 }
 
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(../img/beer.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+.jumbotron table {
+  background-color: black;
+}
 
 @font-face {
     font-family: 'bombingregular';

@@ -26,7 +26,7 @@ post('/login') do
   @name = params.fetch('name').downcase()
   @password = params.fetch('password')
   @row = DB.exec("SELECT * FROM users WHERE name = '#{@name}';")
-  @user = DB.exec("SELECT * FROM users WHERE name='#{@name}';")
+  @user = DB.exec("SELECT * FROM users WHERE name = '#{@name}';")
   @name = @user[0]['name']
   if @row[0]["password"] == @password
     erb(:login_success)
