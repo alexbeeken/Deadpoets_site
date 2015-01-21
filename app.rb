@@ -1,6 +1,6 @@
 require("sinatra")
 require("sinatra/reloader")
-require("./lib/voting_entry")
+require("./lib/cadidate")
 require('pg')
 require('pry')
 
@@ -15,7 +15,7 @@ end
 
 get('/') do
   @table = DB.exec("SELECT * FROM voting_booth;")
-  erb(:home)
+  erb(:voting_page)
 end
 
 get('/login_form') do
