@@ -13,21 +13,24 @@
 					<h5>Select</h5>
 				</th>
 			</tr>
-      <% @table.each() do |entry| %>
+      
+      <% if @election != nil %>
+      <% @election.each() do |candidate| %>
 			<tr>
         <td>
-            <%= "<p>#{entry['placename']}</p>" %>
+          <%= "<p>#{candidate.name}</p>" %>
         </td>
 				<td>
-						<%= "<p>#{entry['votes']}</p>" %>
+          <%= "<p>#{candidate.description}</p>" %>
 				</td>
 				<td>
 					<div class='radio'>
-						<%= "<input type='radio' name='ballot' value=#{entry['id']}>" %>
+            <%= "<input type='radio' name='ballot' value=#{candidate.id}>" %>
       		</div>
 				</td>
       </tr>
     <% end %>
+      <% end %>
     </table>
 		<input type="hidden" name="user" value=<%= "#{@user}" %>>
     <input id="submit" type="submit" value="Vote!" class="btn btn-info">

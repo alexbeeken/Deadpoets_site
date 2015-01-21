@@ -11,13 +11,13 @@
           <h5>Current Votes</h5>
         </th>
       </tr>
-      <% @table.each() do |entry| %>
+      <% @election.each() do |candidate| %>
       <tr>
         <td>
-          <%= "<p>#{entry['placename']}</p>" %>
+          <%= "<p>#{candidate.name}</p>" %>
         </td>
         <td>
-          <%= "<p>#{entry['votes']}</p>" %>
+          <%= "<p>#{candidate.description}</p>" %>
         </td>
     </tr>
     <% end %>

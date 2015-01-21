@@ -1,7 +1,5 @@
-require('pry')
-
 class Candidate
-  attr_reader(:name, :description)
+  attr_reader(:name, :description, :id)
   
   define_method(:initialize) do |attributes|
     @name = attributes.fetch(:name)

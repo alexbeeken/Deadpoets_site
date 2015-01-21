@@ -1,21 +1,28 @@
 require("sinatra")
 require("sinatra/reloader")
-require("./lib/cadidate")
+require("./lib/candidate")
 require('pg')
 require('pry')
 
 DB = PG::Connection.open(:dbname => 'dc4clh7i0hvanm', :host => 'ec2-54-225-101-64.compute-1.amazonaws.com', :port => '5432', :password => 'REMOVED', :user => 'ndpcmhkggeejyz')
 
-=begin
 configure :development do
   set :bind, '0.0.0.0'
   set :port, 3000
 end
+
+=begin 
+TODO make a user class that holds current user information
+
 =end
 
 get('/') do
-  @table = DB.exec("SELECT * FROM voting_booth;")
-  erb(:voting_page)
+  erb(:home)
+end
+
+get('/friday_vote') do
+  @election = Candidate.all()
+  erb(:friday_vote)
 end
 
 get('/login_form') do
