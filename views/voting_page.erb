@@ -29,6 +29,9 @@
           <%= "<p>#{candidate.description}</p>" %>
 				</td>
 				<td>
+					<%= candidate.google_maps_guess %>
+				</td>
+				<td>
 					<div class='radio'>
             <%= "<input type='radio' name='ballot' value=#{candidate.id}>" %>
       		</div>

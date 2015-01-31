@@ -38,6 +38,15 @@ class Candidate
     new_count
   end
 
+  define_method(:google_maps_guess) do
+    output = "https://www.google.com/maps/dir/Epicodus,+208+Southwest+5th+Avenue+%23105,+Portland,+OR+97204/"
+
+    output.concat(self.name)
+
+    output.concat("/")
+
+  end
+
   define_singleton_method(:find_candidate_by_id) do |id|
     returned_query = DB.exec("SELECT * FROM voting_booth WHERE id = #{id};")
     if returned_query.ntuples > 0
@@ -49,5 +58,7 @@ class Candidate
     else
       return false
     end
+
+
 end
 end
