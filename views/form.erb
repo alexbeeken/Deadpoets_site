@@ -1,0 +1,30 @@
+
+<div id="Voting_Box">
+	<h2>Vote for your favorite place!</h2>
+  <form action="/vote_submit" method="post">
+    <table>
+      <% @table.each() do |entry| %>
+      <tr>
+        <td>
+          <div class='radio'>
+            <%= "<input type='radio' name='ballot' value=#{entry['id']}>" %>
+        </td>
+        <td>
+            <%= "<p>#{entry['placename']}</p>" %>
+        </td>    
+      </div>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+    <input id="submit" type="submit" value="Vote!">
+  </form>
+</div>
+
+<div id="Add_A_Bar">
+  <h2>Add a place!</h2>
+  <form action="/add_a_place" method="post">
+    <input type="text" name="add_text">
+    <input type="submit" name="submit" value="add">
+  </form>
+</div>

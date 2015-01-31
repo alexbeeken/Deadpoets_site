@@ -1,0 +1,33 @@
+<div id="Voting_Box">
+  <h1>Friday Night Spot</h1>
+  <h3>Current Standings</h3>
+  <form action="/vote_submit" method="post">
+    <table class="table" width="auto">
+      <tr>
+        <th>
+					<h5>Votes</h5>
+				</th>
+        <th>
+          <h5>Place</h5>
+        </th>
+        <th>
+          <h5>Description</h5>
+        </th>
+      </tr>
+      <% @election.each() do |candidate| %>
+      <tr>
+        <td>
+          <%= "<p>#{candidate.vote_count}</p>" %>
+        <td>
+          <%= "<p>#{candidate.name}</p>" %>
+        </td>
+        <td>
+          <%= "<p>#{candidate.description}</p>" %>
+        </td>
+    </tr>
+    <% end %>
+  </table>
+</form>
+
+<a href="/login_form">Login to Vote</a>
+</div>

@@ -1,0 +1,53 @@
+<div id="Voting_Box">
+	<h2>Vote for your favorite place!</h2>
+  <form action="/vote_submit" method="post">
+    <table class="table" width="auto">
+			<tr>
+        <th>
+					<h5>Votes</h5>
+				</th>
+				<th>
+					<h5>Place</h5>
+				</th>
+				<th>
+					<h5>Description</h5>
+				</th>
+				<th>
+					<h5>Select</h5>
+				</th>
+			</tr>
+      <% if @election != nil %>
+      <% @election.each() do |candidate| %>
+			<tr>
+        <td>
+          <%= "<p>#{candidate.vote_count}</p>" %>
+				</td>
+        <td>
+          <%= "<p>#{candidate.name}</p>" %>
+        </td>
+				<td>
+          <%= "<p>#{candidate.description}</p>" %>
+				</td>
+				<td>
+					<div class='radio'>
+            <%= "<input type='radio' name='ballot' value=#{candidate.id}>" %>
+      		</div>
+				</td>
+      </tr>
+    <% end %>
+      <% end %>
+    </table>
+    <input id="submit" type="submit" value="Vote!" class="btn btn-info">
+  </form>
+</div>
+<br>
+<br>
+
+<div id="Add_A_Place">
+  <h2>Add a place!</h2>
+  <form action="/add_a_place" method="post">
+    <input type="text" name="add_text">
+    <input type="text" name="description" placeholder="brief description">
+    <input type="submit" name="submit" value="add" class="btn btn-info">
+  </form>
+</div>

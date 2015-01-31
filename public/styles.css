@@ -1,0 +1,210 @@
+body {
+  padding-top: 100px;
+  background-image: url('/img/wood.jpg');
+}
+
+h1 {
+  font-family: 'alien_encounters_solidregular';
+}
+
+h2 {
+  font-family: 'djb_carly_sue_got_marriedRg';
+}
+
+h3 {
+  font-family: 'alien_encountersbold_italic';
+  font-size: 2em;
+}
+
+h5 {
+  font-family: 'alien_encounters_solidregular';
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(../img/beer.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+.jumbotron table {
+  background-color: black;
+}
+
+.jumbotron input {
+  color: black;
+}
+
+@font-face {
+    font-family: 'bombingregular';
+    src: url('bombing-webfont.eot');
+    src: url('bombing-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bombing-webfont.woff2') format('woff2'),
+         url('bombing-webfont.woff') format('woff'),
+         url('bombing-webfont.ttf') format('truetype'),
+         url('bombing-webfont.svg#bombingregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'abduction2002regular';
+    src: url('abduction2002-webfont.eot');
+    src: url('abduction2002-webfont.eot?#iefix') format('embedded-opentype'),
+         url('abduction2002-webfont.woff2') format('woff2'),
+         url('abduction2002-webfont.woff') format('woff'),
+         url('abduction2002-webfont.ttf') format('truetype'),
+         url('abduction2002-webfont.svg#abduction2002regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'alien_encounters_solidbold';
+    src: url('alien-encounters-solid-bold-webfont.eot');
+    src: url('alien-encounters-solid-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('alien-encounters-solid-bold-webfont.woff2') format('woff2'),
+         url('alien-encounters-solid-bold-webfont.woff') format('woff'),
+         url('alien-encounters-solid-bold-webfont.ttf') format('truetype'),
+         url('alien-encounters-solid-bold-webfont.svg#alien_encounters_solidbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'alien_encounters_solidregular';
+    src: url('alien-encounters-solid-regular-webfont.eot');
+    src: url('alien-encounters-solid-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('alien-encounters-solid-regular-webfont.woff2') format('woff2'),
+         url('alien-encounters-solid-regular-webfont.woff') format('woff'),
+         url('alien-encounters-solid-regular-webfont.ttf') format('truetype'),
+         url('alien-encounters-solid-regular-webfont.svg#alien_encounters_solidregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'alien_encounters_soliditalic';
+    src: url('alien-encounters-solid-italic-webfont.eot');
+    src: url('alien-encounters-solid-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('alien-encounters-solid-italic-webfont.woff2') format('woff2'),
+         url('alien-encounters-solid-italic-webfont.woff') format('woff'),
+         url('alien-encounters-solid-italic-webfont.ttf') format('truetype'),
+         url('alien-encounters-solid-italic-webfont.svg#alien_encounters_soliditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'alien_encountersbold';
+    src: url('alien-encounters-bold-webfont.eot');
+    src: url('alien-encounters-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('alien-encounters-bold-webfont.woff2') format('woff2'),
+         url('alien-encounters-bold-webfont.woff') format('woff'),
+         url('alien-encounters-bold-webfont.ttf') format('truetype'),
+         url('alien-encounters-bold-webfont.svg#alien_encountersbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'alien_encountersbold_italic';
+    src: url('alien-encounters-bold-italic-webfont.eot');
+    src: url('alien-encounters-bold-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('alien-encounters-bold-italic-webfont.woff2') format('woff2'),
+         url('alien-encounters-bold-italic-webfont.woff') format('woff'),
+         url('alien-encounters-bold-italic-webfont.ttf') format('truetype'),
+         url('alien-encounters-bold-italic-webfont.svg#alien_encountersbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'alien_encountersregular';
+    src: url('alien-encounters-regular-webfont.eot');
+    src: url('alien-encounters-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('alien-encounters-regular-webfont.woff2') format('woff2'),
+         url('alien-encounters-regular-webfont.woff') format('woff'),
+         url('alien-encounters-regular-webfont.ttf') format('truetype'),
+         url('alien-encounters-regular-webfont.svg#alien_encountersregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'alien_encountersitalic';
+    src: url('alien-encounters-italic-webfont.eot');
+    src: url('alien-encounters-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('alien-encounters-italic-webfont.woff2') format('woff2'),
+         url('alien-encounters-italic-webfont.woff') format('woff'),
+         url('alien-encounters-italic-webfont.ttf') format('truetype'),
+         url('alien-encounters-italic-webfont.svg#alien_encountersitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'djb_miss_molly_brownregular';
+    src: url('djb_miss_molly_brown-webfont.eot');
+    src: url('djb_miss_molly_brown-webfont.eot?#iefix') format('embedded-opentype'),
+         url('djb_miss_molly_brown-webfont.woff2') format('woff2'),
+         url('djb_miss_molly_brown-webfont.woff') format('woff'),
+         url('djb_miss_molly_brown-webfont.ttf') format('truetype'),
+         url('djb_miss_molly_brown-webfont.svg#djb_miss_molly_brownregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'djb_carly_sue_got_marriedRg';
+    src: url('djb_carly_sue_got_married-webfont.eot');
+    src: url('djb_carly_sue_got_married-webfont.eot?#iefix') format('embedded-opentype'),
+         url('djb_carly_sue_got_married-webfont.woff2') format('woff2'),
+         url('djb_carly_sue_got_married-webfont.woff') format('woff'),
+         url('djb_carly_sue_got_married-webfont.ttf') format('truetype'),
+         url('djb_carly_sue_got_married-webfont.svg#djb_carly_sue_got_marriedRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
