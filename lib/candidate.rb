@@ -58,7 +58,5 @@ class Candidate
     else
       return false
     end
-
-
-end
+  end
 end
