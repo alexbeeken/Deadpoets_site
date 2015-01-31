@@ -4,10 +4,11 @@ require('./lib/candidate')
 require('./lib/user')
 require('pg')
 require('pry')
-require('./lib/sql')
+require('./lib/services')
 require 'sinatra/captcha'
+require 'yelp'
 
-DB = SQL.connect
+DB = Services.sql_connect
 
 =begin
 configure :development do

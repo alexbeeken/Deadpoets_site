@@ -3,6 +3,9 @@
   <form action="/vote_submit" method="post">
     <table class="table" width="auto">
 			<tr>
+				<th>
+					<h5>Select</h5>
+				</th>
         <th>
 					<h5>Votes</h5>
 				</th>
@@ -13,12 +16,16 @@
 					<h5>Description</h5>
 				</th>
 				<th>
-					<h5>Select</h5>
+					<h5>Google Maps</h5>
 				</th>
 			</tr>
       <% if @election != nil %>
       <% @election.each() do |candidate| %>
 			<tr>
+				<td>
+            <%= "<input type='radio' name='ballot' value=#{candidate.id}>" %>
+
+				</td>
         <td>
           <%= "<p>#{candidate.vote_count}</p>" %>
 				</td>
@@ -29,12 +36,7 @@
           <%= "<p>#{candidate.description}</p>" %>
 				</td>
 				<td>
-					<%= candidate.google_maps_guess %>
-				</td>
-				<td>
-					<div class='radio'>
-            <%= "<input type='radio' name='ballot' value=#{candidate.id}>" %>
-      		</div>
+					<%= "<a href='#{candidate.google_maps_guess}'> Directions From Epicodus </a>" %>
 				</td>
       </tr>
     <% end %>
