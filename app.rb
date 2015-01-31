@@ -10,6 +10,8 @@ require 'yelp'
 
 DB = Services.sql_connect
 
+YELP = Services.yelp_connect
+
 =begin
 configure :development do
   set :bind, '0.0.0.0'
