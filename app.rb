@@ -4,13 +4,10 @@ require('./lib/candidate')
 require('./lib/user')
 require('pg')
 require('pry')
-require('./lib/services')
+require('./lib/sql')
 require 'sinatra/captcha'
-require 'yelp'
 
-DB = Services.sql_connect
-
-YELP = Services.yelp_connect
+DB = SQL.connect
 
 =begin
 configure :development do
@@ -20,10 +17,6 @@ end
 =end
 
 get '/' do
-  erb(:home)
-end
-
-get('/friday_vote') do
   @election = Candidate.all()
   erb(:friday_vote)
 end

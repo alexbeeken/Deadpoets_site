@@ -16,9 +16,6 @@
         <th>
           <h5>Google Maps</h5>
         </th>
-        <th>
-          <h5>Yelp Review</h5>
-        </th>
       </tr>
       <% @election.each() do |candidate| %>
       <tr>
@@ -32,8 +29,6 @@
         </td>
         <td>
           <%= "<a href='#{candidate.google_maps_guess}'> Directions From Epicodus </a>" %>
-        </td>
-        <td>
         </td>
     </tr>
     <% end %>

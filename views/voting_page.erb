@@ -15,16 +15,13 @@
 				<th>
 					<h5>Description</h5>
 				</th>
-				<th>
-					<h5>Google Maps</h5>
-				</th>
 			</tr>
       <% if @election != nil %>
       <% @election.each() do |candidate| %>
 			<tr>
 				<td>
             <%= "<input type='radio' name='ballot' value=#{candidate.id}>" %>
-
+      	
 				</td>
         <td>
           <%= "<p>#{candidate.vote_count}</p>" %>

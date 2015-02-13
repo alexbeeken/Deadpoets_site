@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-require "./lib/services.rb"
+require "./lib/sql.rb"
 require "pg"
 
-DB = Services.sql_connect
+DB = SQL.connect
 puts "Clearing the Vote Tables"
 DB.exec("DELETE FROM voting_booth;")
 puts "Setting user voted field to false"
