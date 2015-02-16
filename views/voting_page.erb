@@ -21,7 +21,7 @@
 			<tr>
 				<td>
             <%= "<input type='radio' name='ballot' value=#{candidate.id}>" %>
-      	
+
 				</td>
         <td>
           <%= "<p>#{candidate.vote_count}</p>" %>
@@ -45,11 +45,15 @@
 <br>
 <br>
 
-<div id="Add_A_Place">
-  <h2>Add a place!</h2>
-  <form action="/add_a_place" method="post">
-    <input type="text" name="add_text">
-    <input type="text" name="description" placeholder="brief description">
-    <input type="submit" name="submit" value="add" class="btn btn-info">
-  </form>
-</div>
+<% if @user.admin %>
+
+	<div id="Add_A_Place">
+	  <h2>Add a place!</h2>
+	  <form action="/add_a_place" method="post">
+	    <input type="text" name="add_text">
+	    <input type="text" name="description" placeholder="brief description">
+	    <input type="submit" name="submit" value="add" class="btn btn-info">
+	  </form>
+	</div>
+
+<% end %>

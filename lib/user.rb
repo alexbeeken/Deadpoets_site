@@ -1,5 +1,5 @@
 class User
-  attr_reader(:id, :name, :password, :email, :voted, :logged_in)
+  attr_reader(:id, :name, :password, :email, :voted, :logged_in, :admin)
   @@current_user = nil
 
   define_method(:initialize) do |attributes|
@@ -9,10 +9,11 @@ class User
     @email = attributes.fetch(:email)
     @voted = attributes.fetch(:voted)
     @logged_in = false
+    @admin = attributes.fetch(:admin)
   end
 
   define_method(:save) do
-    result = DB.exec("INSERT INTO users (name, password, email, voted) VALUES ('#{@name}', '#{@password}', '#{@email}', '#{@voted}') RETURNING id;")
+    result = DB.exec("INSERT INTO users (name, password, email, voted, admin) VALUES ('#{@name}', '#{@password}', '#{@email}', '#{@voted}', '#{@admin}') RETURNING id;")
     @id = result[0]["id"].to_i
   end
 
@@ -25,7 +26,8 @@ class User
       password = hash.fetch("password")
       email = hash.fetch("email")
       voted = hash.fetch("voted")
-      users.push(User.new({:name => name, :id => id, :password => password, :email => email, :voted => voted}))
+      admin = hash.fetch("admin")
+      users.push(User.new({:name => name, :id => id, :password => password, :email => email, :voted => voted, :admin => admin}))
     end
     users
   end
@@ -67,7 +69,8 @@ class User
           password = hash.fetch("password")
           email = hash.fetch("email")
           voted = hash.fetch("voted")
-          return User.new({:name => name, :id => id, :password => password, :email => email, :voted => voted})
+          admin = hash.fetch("admin")
+          return User.new({:name => name, :id => id, :password => password, :email => email, :voted => voted, :admin => admin})
         end
       else
         return false
@@ -77,4 +80,5 @@ class User
   define_singleton_method(:get_current_user) do
     @@current_user
   end
+
 end

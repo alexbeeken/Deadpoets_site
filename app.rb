@@ -42,15 +42,16 @@ post('/add_a_user') do
   @name = params.fetch('name')
   @password = params.fetch('password')
   @email = params.fetch('email')
-  new_user = User.new({:name => @name, :password => @password, :email => @email, :id => 5000, :voted => 'f'})
+  new_user = User.new({:name => @name, :password => @password, :email => @email, :id => 5000, :voted => 'f', :admin => 'f'})
   new_user.save()
   erb(:add_a_user_success)
 end
 
 post("/voting_page") do
+  @user = User.get_current_user
   @election = Candidate.all
-    erb(:voting_page)
-  end
+  erb(:voting_page)
+end
 
 post("/vote_submit") do
   @candidate_id = params.fetch('ballot')
